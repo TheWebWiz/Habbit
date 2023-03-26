@@ -4,6 +4,11 @@
 
 Habbit is a web application that displays positive communities from Reddit's JSON API. It is built using Figma for wireframing, HTML, CSS, Javascript, React, Redux, Jest, and Vite.
 
+## WireFrame
+
+Created with Figma:
+![WireFrame](./public/images/HabbitWireframe.png)
+
 ## Stack Used
 
 - Figma
