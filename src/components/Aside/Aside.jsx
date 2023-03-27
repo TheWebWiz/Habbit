@@ -8,6 +8,10 @@ function Aside() {
             <h2>Communities</h2>
             <ul>
                 <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
             </ul>
         </aside>
     )
