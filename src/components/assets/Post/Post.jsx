@@ -1,16 +1,22 @@
 import React from "react";
 import './Post.css';
-import LikeCounter from "../LikeCounter/LikeCounter";
-import PostContent from "../PostContent/PostContent";
-import PostFooter from "../PostFooter/PostFooter";
 
 function Post() {
     return (
         <div>
-            <LikeCounter />
+            <div>
+                {/* find svg from site in bookmarks for icons */}
+                <button>up arrow</button>
+                <p>like number</p>
+                <button>down arrow</button>
+            </div>
             <h3>Post Title</h3>
-            <PostContent />
-            <PostFooter />
+            <p>Hello World</p>
+            <footer>
+                <a href="#" target="_blank" >Author Name</a>
+                <p>Time Posted</p>
+                <button>Comments</button>
+            </footer>
         </div>
     )
 }

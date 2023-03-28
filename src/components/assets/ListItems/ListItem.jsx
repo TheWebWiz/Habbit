@@ -6,6 +6,7 @@ function ListItem() {
         <li>
             <button>
                 <img src="#" alt="Community-Icon" />Home
+                {/* get svg  */}
             </button>
         </li>
     )
