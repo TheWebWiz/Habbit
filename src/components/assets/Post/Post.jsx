@@ -1,6 +1,7 @@
 import React from "react";
 import './Post.css';
 import { useDispatch } from "react-redux";
+import convertEpochDate from "../utils/convertEpochDate";
 
 function Post({ post }) {
     const dispatch = useDispatch();
@@ -17,7 +18,7 @@ function Post({ post }) {
             <p>{post.body_html}</p>
             <footer>
                 <a href="#" target="_blank" >{post.author}</a>
-                <p>Time Posted</p>
+                <p>{convertEpochDate(post.created_utc)}</p>
                 <button>{post.num_contents}</button>
             </footer>
         </article>
