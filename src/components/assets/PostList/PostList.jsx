@@ -1,15 +1,18 @@
 import React from "react";
 import Post from "../Post/Post";
 import './PostList.css';
+import { useDispatch, useSelector } from "react-redux";
 
 function PostList() {
+    const dispatch = useDispatch();
+    const { posts } = useSelector((store) => store.reddit);
+
     return (
-        <div>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-        </div>
+        <section>
+           {posts.map((post) => {
+            return <Post key={post.id} {...item} />;
+           })}
+        </section>
     )
 }
 

@@ -1,23 +1,26 @@
 import React from "react";
 import './Post.css';
+import { useDispatch } from "react-redux";
 
-function Post() {
+function Post({ post }) {
+    const dispatch = useDispatch();
+
     return (
-        <div>
+        <article key={post.id}>
             <div>
                 {/* find svg from site in bookmarks for icons */}
                 <button>up arrow</button>
-                <p>like number</p>
+                <p>{post.ups}</p>
                 <button>down arrow</button>
             </div>
-            <h3>Post Title</h3>
-            <p>Hello World</p>
+            <h3>{post.title}</h3>
+            <p>{post.body_html}</p>
             <footer>
-                <a href="#" target="_blank" >Author Name</a>
+                <a href="#" target="_blank" >{post.author}</a>
                 <p>Time Posted</p>
-                <button>Comments</button>
+                <button>{post.num_contents}</button>
             </footer>
-        </div>
+        </article>
     )
 }
 
