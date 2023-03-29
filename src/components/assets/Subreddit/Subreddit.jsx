@@ -1,7 +1,7 @@
 import React from "react";
-import './ListItem.css';
+import './Subreddit.css';
 
-function ListItem() {
+function Subreddit() {
     return (
         <li>
             <button>
@@ -12,4 +12,4 @@ function ListItem() {
     )
 }
 
-export default ListItem;
+export default Subreddit;
