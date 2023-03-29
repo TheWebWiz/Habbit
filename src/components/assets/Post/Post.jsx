@@ -15,9 +15,10 @@ function Post({ post }) {
                 <button>down arrow</button>
             </div>
             <h3>{post.title}</h3>
-            <p>{post.body_html}</p>
+            <img src={post.url} alt={`${post.title}`} />
+            <p>{post.selftext}</p>
             <footer>
-                <a href="#" target="_blank" >{post.author}</a>
+                <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >{post.author}</a>
                 <p>{convertEpochDate(post.created_utc)}</p>
                 <button>{post.num_contents}</button>
             </footer>

@@ -20,10 +20,17 @@ function PostList() {
     }, [selectedSubreddit]);
 
     return (
+//if 18+ no
+
         <section>
-           
+           {posts.map((post, index) => (
+            <Post
+              key={post.id}
+              post={post}
+            />
+           ))}
         </section>
-    )
-}
+    );
+};
 
 export default PostList;
