@@ -50,7 +50,7 @@ function Post({ post, onToggleComments }) {
         return null;
     };
 
-    const image = post.url[post.url.length - 4] == '.' ? <img src={post.url} alt={`${post.title}`} /> : <div></div>;
+    const content = post.url[post.url.length - 4] == '.' ? <img src={post.url} alt={`${post.title}`} /> : <p>{post.selftext}</p>;
 
     return (
         <article key={post.id}>
@@ -69,8 +69,7 @@ function Post({ post, onToggleComments }) {
                 </button>
             </div>
             <h3>{post.title}</h3>
-            {image}
-            <p>{post.selftext}</p>
+            {content}
             <footer>
                 <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >{post.author}</a>
                 <p>{convertEpochDate(post.created_utc)}</p>
