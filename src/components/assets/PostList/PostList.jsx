@@ -27,6 +27,17 @@ function PostList() {
         return getComments;
     };
 
+    if (posts.length === 0) {
+        return (
+            <div>
+                <h2>No posts matching "{searchTerm}"</h2>
+                <button onClick={() => dispatch(setSearchTerm(''))}>
+                    Go home
+                </button>
+            </div>
+        );
+    }
+
     return (
 //if 18+ no
 //no pinned content
