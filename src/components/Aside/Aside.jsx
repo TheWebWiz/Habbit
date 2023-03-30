@@ -20,7 +20,6 @@ function Aside() {
                     />
                    )
                 })}
-                {console.log(subreddits)}
             </div>
         </aside>
     )

@@ -19,6 +19,14 @@ function PostList() {
         dispatch(fetchPosts(selectedSubreddit));
     }, [selectedSubreddit]);
 
+    const onToggleComments = (index) => {
+        const getComments = (permalink) => {
+            dispatch(fetchComments(index, permalink));
+        };
+
+        return getComments;
+    };
+
     return (
 //if 18+ no
 //no pinned content
@@ -28,6 +36,7 @@ function PostList() {
             <Post
               key={post.id}
               post={post}
+              onToggleComments={onToggleComments(index)}
             />
            ))}
         </section>

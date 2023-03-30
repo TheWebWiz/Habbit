@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import './Post.css';
 import convertEpochDate from "../utils/convertEpochDate";
-import { DownArrow, UpArrow } from "../utils/svg";
+import { CommentsIcon, DownArrow, UpArrow } from "../utils/svg";
+import Comment from "../../Comment/Comment";
 
-function Post({ post }) {
+function Post({ post, onToggleComments }) {
     const [voteValue, setVoteValue] = useState(0);
 
     const onHandleVote = (newValue) => {
@@ -23,7 +24,31 @@ function Post({ post }) {
             if (voteValue === -1) {
                 return 'down-vote'
             }
+
+            return '';
+        };
+
+    const renderComments = () => {
+        if (post.errorComments) {
+            return (
+                <div>
+                    <h3>Error loading Comments</h3>
+                </div>
+            );
         }
+
+        if (post.showingComments) {
+            return (
+                <div>
+                    {post.comments.map((comment) => (
+                        <Comment key={comment.id} comment={comment} />
+                    ))}
+                </div>
+            )
+        }
+
+        return null;
+    };
 
     return (
         <article key={post.id}>
@@ -47,8 +72,16 @@ function Post({ post }) {
             <footer>
                 <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >{post.author}</a>
                 <p>{convertEpochDate(post.created_utc)}</p>
-                <button>{post.num_contents}</button>
+                <button
+                  onClick={() => onToggleComments(post.permalink)}
+                >
+                    <CommentsIcon />
+                    {post.num_contents}
+                </button>
             </footer>
+            <div>
+                {renderComments()}
+            </div>
         </article>
     )
 }
