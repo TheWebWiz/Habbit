@@ -6,7 +6,7 @@ const initialState = {
   error: false,
   isLoading: false,
   searchTerm: "",
-  selectedSubreddit: "/r/happy/",
+  selectedSubreddit: "/r/Positive/",
 };
 
 const redditSlice = createSlice({

@@ -21,6 +21,7 @@ function PostList() {
 
     return (
 //if 18+ no
+//no pinned content
 
         <section>
            {posts.map((post, index) => (

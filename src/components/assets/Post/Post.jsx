@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import './Post.css';
-import { useDispatch } from "react-redux";
 import convertEpochDate from "../utils/convertEpochDate";
 
 function Post({ post }) {
-    const dispatch = useDispatch();
+    const [voteValue, setVoteValue] = useState(0);
+
+    const onHandleVote = (newValue) => {
+        if (newValue === voteValue) {
+            setVoteValue(0);
+        } else if (newValue === 1) {
+            setVoteValue(1)
+        } else {
+            setVoteValue(-1);
+        }
+    };
+
+        const getVoteType = () => {
+            if (voteValue === 1) {
+                return 'up-vote';
+            }
+            if (voteValue === -1) {
+                return 'down-vote'
+            }
+        }
 
     return (
         <article key={post.id}>
             <div>
                 {/* find svg from site in bookmarks for icons */}
-                <button>up arrow</button>
-                <p>{post.ups}</p>
-                <button>down arrow</button>
+                <button
+                  onClick={() => onHandleVote(1)}
+                >up arrow</button>
+                <p>{post.ups + voteValue}</p>
+                <button
+                  onClick={() => onHandleVote(-1)}
+                >down arrow</button>
             </div>
             <h3>{post.title}</h3>
             <img src={post.url} alt={`${post.title}`} />

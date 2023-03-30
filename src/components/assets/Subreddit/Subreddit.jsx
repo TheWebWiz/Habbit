@@ -1,14 +1,9 @@
 import React from "react";
 import './Subreddit.css';
 
-function Subreddit() {
+function Subreddit(props) {
     return (
-        <li>
-            <button>
-                <img src="#" alt="Community-Icon" />Home
-                {/* get svg  */}
-            </button>
-        </li>
+        <h4>Hello</h4>
     )
 }
 
