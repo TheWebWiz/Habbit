@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './Post.css';
 import convertEpochDate from "../utils/convertEpochDate";
+import { DownArrow, UpArrow } from "../utils/svg";
 
 function Post({ post }) {
     const [voteValue, setVoteValue] = useState(0);
@@ -30,11 +31,15 @@ function Post({ post }) {
                 {/* find svg from site in bookmarks for icons */}
                 <button
                   onClick={() => onHandleVote(1)}
-                >up arrow</button>
+                >
+                    <UpArrow />
+                </button>
                 <p>{post.ups + voteValue}</p>
                 <button
                   onClick={() => onHandleVote(-1)}
-                >down arrow</button>
+                >
+                    <DownArrow />
+                </button>
             </div>
             <h3>{post.title}</h3>
             <img src={post.url} alt={`${post.title}`} />
