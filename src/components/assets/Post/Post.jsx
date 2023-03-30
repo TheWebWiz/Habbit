@@ -50,6 +50,8 @@ function Post({ post, onToggleComments }) {
         return null;
     };
 
+    const image = post.url[post.url.length - 4] == '.' ? <img src={post.url} alt={`${post.title}`} /> : <div></div>;
+
     return (
         <article key={post.id}>
             <div>
@@ -67,7 +69,7 @@ function Post({ post, onToggleComments }) {
                 </button>
             </div>
             <h3>{post.title}</h3>
-            <img src={post.url} alt={`${post.title}`} />
+            {image}
             <p>{post.selftext}</p>
             <footer>
                 <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >{post.author}</a>
