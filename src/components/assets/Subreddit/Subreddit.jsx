@@ -1,9 +1,12 @@
 import React from "react";
 import './Subreddit.css';
 
-function Subreddit(props) {
+function Subreddit({ id, name, img }) {
     return (
-        <h4>Hello</h4>
+        <button>
+            <img src={img} alt={id} />
+            <h4>{name}</h4>
+        </button>
     )
 }
 

@@ -11,10 +11,14 @@ function Aside() {
             <h2>Communities</h2>
             <div>
                 {subreddits.map((subreddit) => {
-                    return (<Subreddit
-                      key={subreddit.id}
-                      subreddit={subreddit}
-                    />)
+                    return (
+                        <Subreddit
+                        key={subreddit.id}
+                        id={subreddit.id}
+                        name={subreddit.name}
+                        img={subreddit.img}
+                    />
+                   )
                 })}
                 {console.log(subreddits)}
             </div>
