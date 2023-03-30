@@ -39,6 +39,7 @@ function Header(){
                 <SearchIcon />
                 </button>
             </form>
+            <p>Make being Happy your new Habbit!!</p>
         </header>
     )
 }
