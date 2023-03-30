@@ -8,6 +8,7 @@ import {
     setSearchTerm,
     fetchComments,
 } from "../../../store/redditSlice";
+import ReactLoading from 'react-loading';
 
 function PostList() {
     const reddit = useSelector((state) => state.reddit);
@@ -27,6 +28,14 @@ function PostList() {
         return getComments;
     };
 
+    if (isLoading === true) {
+        return (
+            <div>
+                <ReactLoading type={'spin'} color={'#000'} height={667} width={375} />
+            </div>
+        );
+    }
+
     if (posts.length === 0) {
         return (
             <div>
@@ -37,6 +46,8 @@ function PostList() {
             </div>
         );
     }
+
+    
 
     return (
 //if 18+ no

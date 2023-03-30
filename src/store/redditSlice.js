@@ -17,7 +17,7 @@ const redditSlice = createSlice({
       state.posts = action.payload;
     },
     startGetPosts(state) {
-      state.isLoading = false;
+      state.isLoading = true;
       state.error = false;
     },
     getPostsSuccess(state, action) {
