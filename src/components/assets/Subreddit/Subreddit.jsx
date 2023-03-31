@@ -13,6 +13,7 @@ function Subreddit({ id, name, img, url }) {
     return (
         <button
             onClick={() => dispatch(setSelectedSubreddit(url))}
+            className="subreddit"
         >
             <div>
                 {subredditImg}

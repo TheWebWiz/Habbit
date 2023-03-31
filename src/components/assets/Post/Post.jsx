@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './Post.css';
 import convertEpochDate from "../utils/convertEpochDate";
 import { CommentsIcon, DownArrow, UpArrow } from "../utils/svg";
 import Comment from "../../Comment/Comment";
@@ -54,7 +53,7 @@ function Post({ post, onToggleComments }) {
 
     return (
         <article key={post.id}>
-            <div>
+            <div className="upvote-box">
                 {/* find svg from site in bookmarks for icons */}
                 <button
                   onClick={() => onHandleVote(1)}
@@ -68,18 +67,22 @@ function Post({ post, onToggleComments }) {
                     <DownArrow />
                 </button>
             </div>
-            <h3>{post.title}</h3>
-            {content}
-            <footer>
-                <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >{post.author}</a>
-                <p>{convertEpochDate(post.created_utc)}</p>
-                <button
-                  onClick={() => onToggleComments(post.permalink)}
-                >
-                    <CommentsIcon />
-                    {post.num_contents}
-                </button>
-            </footer>
+            <div className="post">
+                <h3>{post.title}</h3>
+                <div className="post-content">
+                    {content}
+                </div>
+                <footer>
+                    <a href={`https://www.reddit.com/u/${post.author}`} target="_blank" >u/{post.author}</a>
+                    <p>{convertEpochDate(post.created_utc)}</p>
+                    <button
+                    onClick={() => onToggleComments(post.permalink)}
+                    >
+                        <CommentsIcon />
+                        {post.num_contents}
+                    </button>
+                </footer>
+            </div>
             <div>
                 {renderComments()}
             </div>

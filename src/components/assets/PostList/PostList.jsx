@@ -53,7 +53,7 @@ function PostList() {
 //if 18+ no
 //no pinned content
 
-        <section>
+        <section className="post-list">
            {posts.map((post, index) => (
             <Post
               key={post.id}
