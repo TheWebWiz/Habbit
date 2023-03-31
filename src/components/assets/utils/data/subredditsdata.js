@@ -1,0 +1,136 @@
+const subredditdata = [
+  {
+    id: 0,
+    name: "/r/Positive",
+    link: "/r/Positive/",
+    img: "",
+  },
+  {
+    id: 1,
+    name: "/r/happy",
+    link: "/r/happy/",
+    img: "https://b.thumbs.redditmedia.com/cVLLdr_kSD9sCly5HlQCmPtaoUSLG_s5oRQjBI2YqmY.png",
+  },
+  {
+    id: 2,
+    name: "/r/randomactsofkindness",
+    link: "/r/randomactsofkindness/",
+    img: "https://styles.redditmedia.com/t5_2rl0v/styles/communityIcon_m0gcm5rwfwb81.png?width=256&v=enabled&s=a8c2ca2fe1586beb475eab66001ea1828d30a707",
+  },
+  {
+    id: 3,
+    name: "/r/Eyebleach",
+    link: "/r/Eyebleach/",
+    img: "",
+  },
+  {
+    id: 4,
+    name: "/r/happycowgifs",
+    link: "/r/happycowgifs/",
+    img: "",
+  },
+  {
+    id: 5,
+    name: "/r/Kitten",
+    link: "/r/Kitten/",
+    img: "https://styles.redditmedia.com/t5_2r2m1/styles/communityIcon_ce3aowwbhns91.png?width=256&v=enabled&s=045138cedb733aff96d54bc390ab9d490e969119",
+  },
+  {
+    id: 6,
+    name: "/r/PuppySmiles",
+    link: "/r/PuppySmiles/",
+    img: "https://styles.redditmedia.com/t5_346cl/styles/communityIcon_09sormoxbtu31.png?width=256&v=enabled&s=15aade216a832b8a169717f3d2c2b58dc412a4fc",
+  },
+  {
+    id: 7,
+    name: "/r/HappyRats",
+    link: "/r/HappyRats/",
+    img: "https://styles.redditmedia.com/t5_42ef9x/styles/communityIcon_ay9n4jowxfl61.png?width=256&v=enabled&s=5c7474b417361f835be8f0e62a41306ab15c1efc",
+  },
+  {
+    id: 8,
+    name: "/r/animalssmiling",
+    link: "/r/animalssmiling/",
+    img: "",
+  },
+  {
+    id: 9,
+    name: "/r/AnimalsBeingHappy",
+    link: "/r/AnimalsBeingHappy/",
+    img: "",
+  },
+  {
+    id: 10,
+    name: "/r/aww",
+    link: "/r/aww/",
+    img: "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_6fzlk8ukx6s51.jpg?width=256&format=pjpg&v=enabled&s=263e1beab5acebfd0fdc9e138aaffcd4bc6ef7b6",
+  },
+  {
+    id: 11,
+    name: "/r/awww",
+    link: "/r/awww/",
+    img: "https://styles.redditmedia.com/t5_2suml/styles/communityIcon_997ef2evx0p61.png?width=256&v=enabled&s=872c2e1b9b1ac2e9aaef7f81f5742ac0558ea6ba",
+  },
+  {
+    id: 12,
+    name: "/r/MadeMeSmile",
+    link: "/r/MadeMeSmile/",
+    img: "https://styles.redditmedia.com/t5_2uqcm/styles/communityIcon_kfqpkjbvpv001.png?width=256&v=enabled&s=01612176bef55554664a2909df8190aff3b8353c",
+  },
+  {
+    id: 13,
+    name: "/r/HappyTrees",
+    link: "/r/HappyTrees/",
+    img: "https://styles.redditmedia.com/t5_2sbc6/styles/communityIcon_83jph4ckosv61.png?width=256&v=enabled&s=504948586a47c84d3f264ea56e69855aab9bcb5c",
+  },
+  {
+    id: 14,
+    name: "/r/FreeCompliments",
+    link: "/r/FreeCompliments/",
+    img: "https://b.thumbs.redditmedia.com/T5m7I43o0-Q-mqhWVtSKMzUxT0jMLoI3tr2xYsoQEzs.png",
+  },
+  {
+    id: 15,
+    name: "/r/Fun",
+    link: "/r/Fun/",
+    img: "",
+  },
+  {
+    id: 16,
+    name: "/r/funnyvideos",
+    link: "/r/funnyvideos/",
+    img: "https://styles.redditmedia.com/t5_2qoos/styles/communityIcon_dhipgdtgru941.png?width=256&v=enabled&s=9f8ff4839d5ef9f472a029d3bf895c4b07fab576",
+  },
+  {
+    id: 17,
+    name: "/r/funfacts",
+    link: "/r/funfacts/",
+    img: "",
+  },
+  {
+    id: 18,
+    name: "/r/TodayIamHappy",
+    link: "/r/TodayIamHappy/",
+    img: "",
+  },
+  {
+    id: 19,
+    name: "/r/HappyLittleAccident",
+    link: "/r/HappyLittleAccident/",
+    img: "",
+  },
+  {
+    id: 20,
+    name: "/r/HappyVoids",
+    link: "/r/HappyVoids/",
+    img: "",
+  },
+  {
+    id: 21,
+    name: "/r/HappyHedgehogs",
+    link: "/r/HappyHedgehogs/",
+    img: "https://b.thumbs.redditmedia.com/Ij1-un9gBNEMmCsRjG6hLQtvLljcu15n-J87lroV99U.png",
+  },
+];
+
+export default subredditdata;
